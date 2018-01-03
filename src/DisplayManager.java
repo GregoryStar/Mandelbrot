@@ -25,6 +25,7 @@ public class DisplayManager {
                 //threads[i][j].run();
             }
         }
+        //imagedata.setRGB(500, 500, 0xFFFFFFFF);
         return complexPlane;
     }
 
@@ -49,6 +50,8 @@ public class DisplayManager {
 
     public void click(int x, int y){
         //translate the coordinates, then zoom
+
+        //Translate center
         int xScreenOffset = x - (screenWidth/2);
         int yScreenOffset = y - (screenHeight/2);
         double realDist = maxReal - minReal;
@@ -57,10 +60,16 @@ public class DisplayManager {
         minImag += yScreenOffset * (imagDist/screenHeight);
         maxReal = minReal + realDist;
         maxImag = minImag + imagDist;
-        maxReal /= 2;
-        minReal /= 2;
-        maxImag /= 2;
-        minImag /= 2;
+
+        //Zoom
+        minReal += realDist * 0.25;
+        maxReal -= realDist * 0.25;
+        minImag += imagDist * 0.25;
+        maxImag -= imagDist * 0.25;
+//        maxReal /= 2;
+//        minReal /= 2;
+//        maxImag /= 2;
+//        minImag /= 2;
     }
 
 }
