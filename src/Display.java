@@ -22,6 +22,7 @@ public class Display{
                 container.setIcon(new ImageIcon(displayManager.getImageData()));
                 container.revalidate();
                 container.repaint();
+                System.out.println(displayManager.writeImageDataToFile());
 
 
             }

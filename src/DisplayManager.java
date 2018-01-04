@@ -1,4 +1,7 @@
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by F on 1/1/2018.
@@ -70,6 +73,18 @@ public class DisplayManager {
 //        minReal /= 2;
 //        maxImag /= 2;
 //        minImag /= 2;
+    }
+
+    public boolean writeImageDataToFile(){
+        try{
+            File outputfile = new File("saved.png");
+            ImageIO.write(imagedata, "png", outputfile);
+            return true;
+
+        } catch (IOException e){
+            System.out.println("Write file failed");
+            return false;
+        }
     }
 
 }
