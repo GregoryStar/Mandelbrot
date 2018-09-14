@@ -1,6 +1,7 @@
 # Mandelbrot
 ### Introduction:
-Mandlebrot Visualizer is an AWT-based Java application that allows users to zoom in on a Mandlebrot visualization.
+Mandlebrot Visualizer is an AWT-based Java application that allows users to zoom in on a Mandlebrot visualization
+and (eventually) generate an animation of their chosen path.
 
 ### Display:
 The display consists of a simple form window which contains the rendering of the Mandlebrot. Colors are determined
