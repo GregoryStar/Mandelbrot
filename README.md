@@ -13,7 +13,7 @@ clicked location.
 
 ### Image Capture:
 Whenever a frame is rendered, the pixels are saved to an image file. There is also a feature built in (but not currently
-actived) which breaks each zoom into a series of smaller zooms, and captures an image for each sub-zoom.
+activated) which breaks each zoom into a series of smaller zooms, and captures an image for each sub-zoom.
 
 ### Video Generation:
 Eventually, the idea is to take these images and convert them into a video, allowing users to create cool animations of
